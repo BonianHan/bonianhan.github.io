@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Bonian's room"
 title_separator          : "-"
 name                     : &name "Bonian Han"
-description              : &description "personal description"
+description              : &description "Bonian Han - CS Ph.D. student at NJIT"
 url                      : https://bonianhan.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "BonianHan/bonianhan.github.io"
@@ -86,9 +86,9 @@ author:
   name             : "Bonian Han"
   pronouns         : # example: "she/her"  
   bio              : "Stay Hungry. Stay Foolish."
-  location         : "Hangzhou, China"
-  employer         : "Hangzhou Dianzi University"
-  googlescholar    : "https://scholar.google.com/citations?user=ABC123456"
+  location         : "Newark, NJ"
+  employer         : "New Jersey Institute of Technology"
+  googlescholar    : "https://scholar.google.com/citations?user=1WOOkRcAAAAJ"
   email            : "bonian985@gmail.com" 
 
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
@@ -258,7 +258,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
