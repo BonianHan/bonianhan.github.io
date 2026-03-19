@@ -21,6 +21,7 @@ If you are interested in my research, please feel free to [contact me](mailto:bh
 
 * **Feb 2026:** Paper submitted to MICCAI 2026.
 * **Sep 2025:** Started Ph.D. in Computer Science at NJIT.
+* **Jul 2025:** Graduated from Hangzhou Dianzi University with B.S. in Statistics.
 * **Oct 2024:** Paper accepted at IEEE Big Data 2024.
 * **Jul 2024:** Paper accepted at EMBC 2024.
 
