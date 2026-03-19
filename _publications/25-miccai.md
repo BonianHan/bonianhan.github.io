@@ -3,7 +3,7 @@ title: "INST-Align: Implicit Neural Alignment for Spatial Transcriptomics via Ca
 collection: publications
 permalink: /publication/25-miccai
 date: 2025-06-01
-excerpt: "Overview of the INST-Align pipeline for joint spatial alignment and expression integration of spatial transcriptomics data."
+excerpt: "Overview of the INST-Align pipeline for joint spatial alignment and expression integration of spatial transcriptomics data.<br/><img src='/images/miccai.png'>"
 venue: 'MICCAI 2026 (Under Review)'
 citation: ""
 ---
