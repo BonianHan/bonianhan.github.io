@@ -9,7 +9,7 @@ redirect_from:
 
 <!-- ![script](/images/about.jpg){: .align-right width="300px"} -->
 
-📖 Starting in Fall 2026, I will pursue my Ph.D. in Computing at [Boise State University](https://www.boisestate.edu/) under the supervision of Prof. [Yu Zhang](https://yuzhang03.github.io/lab.html#). Previously, I was a Ph.D. student in Computer Science at the [New Jersey Institute of Technology (NJIT)](https://www.njit.edu/) from Fall 2025 to Spring 2026. I received my B.S. in Statistics from [Hangzhou Dianzi University](https://en.hdu.edu.cn/) in 2025.
+📖 Starting in Fall 2026, I will pursue my Ph.D. in Computing at [Boise State University](https://www.boisestate.edu/) under the supervision of Prof. [Yu Zhang](https://yuzhang03.github.io/lab.html#). Previously, I was a Ph.D. student in Computer Science at the [NJIT](https://www.njit.edu/)(2025-2026). I received my B.S. in Statistics from [Hangzhou Dianzi University](https://en.hdu.edu.cn/) in 2025.
 
 👨‍💻 My research focuses on **computer vision**, **continual learning**, and **embodied AI**. I am also broadly interested in trustworthy machine learning, including model calibration and uncertainty quantification. Beyond these areas, I remain particularly interested in neural representation methods for spatial transcriptomics. Previously, I worked with Prof. [Gongbo Liang](http://www.gb-liang.com/) at [Texas A&M University-San Antonio](https://www.tamusa.edu/) on medical image analysis and neural network calibration, resulting in publications at EMBC, IEEE Big Data, and ACMSE. At NJIT, I worked with Prof. [Zhi Wei](https://scholar.google.com/citations?user=zAva84oAAAAJ&hl=en) on spatial transcriptomics; our work was accepted to MICCAI 2026.
 
