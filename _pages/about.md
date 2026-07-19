@@ -9,9 +9,9 @@ redirect_from:
 
 <!-- ![script](/images/about.jpg){: .align-right width="300px"} -->
 
-📖 I am a Ph.D. student in Computer Science at [New Jersey Institute of Technology (NJIT)](https://www.njit.edu/) (Fall 2025–), supervised by Prof. [Zhi Wei](https://scholar.google.com/citations?user=0fMBm20AAAAJ). I received my B.S. in Statistics from [Hangzhou Dianzi University](https://en.hdu.edu.cn/) in 2025.
+📖 Starting in Fall 2026, I will pursue my Ph.D. in Computing at [Boise State University](https://www.boisestate.edu/) under the supervision of Prof. [Yu Zhang](https://yuzhang03.github.io/lab.html#). Previously, I was a Ph.D. student in Computer Science at the [New Jersey Institute of Technology (NJIT)](https://www.njit.edu/) from Fall 2025 to Spring 2026. I received my B.S. in Statistics from [Hangzhou Dianzi University](https://en.hdu.edu.cn/) in 2025.
 
-👨‍💻 My research focuses on **representation learning** and **computational biology**, with a particular interest in developing neural representation methods for spatial transcriptomics data. I am also broadly interested in trustworthy machine learning, including model calibration and uncertainty quantification. Previously, I worked with Prof. [Gongbo Liang](http://www.gb-liang.com/) at [Texas A&M University-San Antonio](https://www.tamusa.edu/) on medical image analysis and neural network calibration, where I published papers at EMBC, IEEE Big Data, and ACMSE.
+👨‍💻 My research focuses on **computer vision**, **continual learning**, and **embodied AI**. I am also broadly interested in trustworthy machine learning, including model calibration and uncertainty quantification. Beyond these areas, I remain particularly interested in neural representation methods for spatial transcriptomics. Previously, I worked with Prof. [Gongbo Liang](http://www.gb-liang.com/) at [Texas A&M University-San Antonio](https://www.tamusa.edu/) on medical image analysis and neural network calibration, resulting in publications at EMBC, IEEE Big Data, and ACMSE. At NJIT, I worked with Prof. [Zhi Wei](https://scholar.google.com/citations?user=0fMBm20AAAAJ) on spatial transcriptomics; our work was accepted to MICCAI 2026.
 
 If you are interested in my research, please feel free to [contact me](mailto:bh348@njit.edu). [CV](https://bonianhan.github.io/files/CV.pdf)
 
@@ -29,17 +29,11 @@ If you are interested in my research, please feel free to [contact me](mailto:bh
 
 # 🔎 My Research Interests
 
-* **a) Representation Learning**
-  - Implicit Neural Representations
-  - Spatial Transcriptomics
-
-* **b) Computational Biology**
-  - Spatial Data Integration
-  - Biological Image Analysis
-
-* **c) Trustworthy Neural Networks**
-  - Deep Neural Network Model Calibration
-  - Model Feature Extractor
+* **Computer Vision**
+* **Continual Learning**
+* **Embodied AI**
+* **Trustworthy Machine Learning**
+* **Neural Representations for Spatial Transcriptomics**
 
 ---
 **Hobbies:** Basketball, Tennis, Running
