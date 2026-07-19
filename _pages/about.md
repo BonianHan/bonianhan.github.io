@@ -18,7 +18,7 @@ If you are interested in my research, please feel free to [contact me](mailto:bh
 ---
 
 # 📰 News
-
+* **Jun 2026:** Thrilled to share that our paper, “INST-Align: Implicit Neural Alignment for Spatial Transcriptomics via Canonical Expression Fields,” has been accepted to MICCAI 2026!
 * **Feb 2026:** Paper submitted to MICCAI 2026.
 * **Sep 2025:** Started Ph.D. in Computer Science at NJIT.
 * **Jul 2025:** Graduated from Hangzhou Dianzi University with B.S. in Statistics.
@@ -45,4 +45,3 @@ If you are interested in my research, please feel free to [contact me](mailto:bh
 **Hobbies:** Basketball, Tennis, Running
 
 🎾I used to be a ball boy at the 2022 Hangzhou Asian Games and served as a ball kid coach for teenagers aged 10-16 at the Hangzhou ATP 2024.
-
