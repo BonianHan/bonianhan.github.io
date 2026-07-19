@@ -84,6 +84,71 @@
   }
 }
 
+/*
+   Publications
+   ========================================================================== */
+
+.publications-intro {
+  max-width: 62ch;
+  margin: 0.75em 0 1.75em;
+  color: $gray;
+}
+
+.publications-list {
+  max-width: 78ch;
+  border-top: 1px solid $border-color;
+}
+
+.publication-item {
+  padding: 1.35em 0 1.4em;
+  border-bottom: 1px solid $border-color;
+}
+
+.publication-item__title {
+  margin: 0;
+  font-size: $type-size-5;
+  line-height: 1.4;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+.publication-item__meta {
+  margin: 0.45em 0 0.75em;
+  color: $gray;
+  font-size: $type-size-6;
+  line-height: 1.5;
+}
+
+.publication-item__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65em 1.25em;
+}
+
+.publication-item__action {
+  font-size: $type-size-6;
+  font-weight: 600;
+  text-decoration: none !important;
+
+  i {
+    width: 1.1em;
+    margin-right: 0.25em;
+    text-align: center;
+  }
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
 
 /*
    List view

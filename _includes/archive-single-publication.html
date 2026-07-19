@@ -1,0 +1,38 @@
+{% include base_path %}
+
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+
+<article class="publication-item" itemscope itemtype="http://schema.org/CreativeWork">
+  <h2 class="publication-item__title" itemprop="headline">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+  </h2>
+
+  <p class="publication-item__meta">
+    {% if post.status == 'accepted' %}
+      Accepted by <em>{{ post.venue }}</em>.
+    {% elsif post.venue contains 'Submitted' %}
+      Submitted to <em>{{ post.venue | remove: ' (Submitted)' }}</em>.
+    {% else %}
+      Published in <em>{{ post.venue }}</em>.
+    {% endif %}
+  </p>
+
+  <nav class="publication-item__actions" aria-label="Links for {{ post.title | escape }}">
+    {% if post.paperurl %}
+      <a class="publication-item__action" href="{{ post.paperurl }}">
+        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+        Paper
+      </a>
+    {% endif %}
+    {% if post.slidesurl %}
+      <a class="publication-item__action" href="{{ post.slidesurl }}">
+        <i class="fas fa-desktop" aria-hidden="true"></i>
+        Slides
+      </a>
+    {% endif %}
+    <a class="publication-item__action" href="{{ base_path }}{{ post.url }}">
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      Details
+    </a>
+  </nav>
+</article>

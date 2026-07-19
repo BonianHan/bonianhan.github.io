@@ -4,7 +4,8 @@ collection: publications
 permalink: /publication/26-miccai
 date: 2026-02-26
 excerpt: "Overview of the INST-Align pipeline for joint spatial alignment and expression integration of spatial transcriptomics data.<br/><img src='/images/miccai.png'>"
-venue: 'MICCAI 2026'
+venue: '29th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2026)'
+status: 'accepted'
 paperurl: '/files/MICCAI26.pdf'
 ---
 
