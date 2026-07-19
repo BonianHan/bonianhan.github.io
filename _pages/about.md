@@ -13,11 +13,11 @@ redirect_from:
 
 👨‍💻 My research focuses on **computer vision**, **continual learning**, and **embodied AI**. I am also broadly interested in trustworthy machine learning, including model calibration and uncertainty quantification. Beyond these areas, I remain particularly interested in neural representation methods for spatial transcriptomics. Previously, I worked with Prof. [Gongbo Liang](http://www.gb-liang.com/) at [Texas A&M University-San Antonio](https://www.tamusa.edu/) on medical image analysis and neural network calibration, resulting in publications at EMBC, IEEE Big Data, and ACMSE. At NJIT, I worked with Prof. [Zhi Wei](https://scholar.google.com/citations?user=zAva84oAAAAJ&hl=en) on spatial transcriptomics; our work was accepted to MICCAI 2026.
 
-If you are interested in my research, please feel free to [contact me](mailto:bh348@njit.edu). [CV](https://bonianhan.github.io/files/CV.pdf)
+If you are interested in my research, please feel free to [contact me](mailto:bonianhan@u.boisestate.edu). [CV](https://bonianhan.github.io/files/CV.pdf)
 
 ---
 
-# 📰 News
+## 📰 News
 * **Jun 2026:** Thrilled to share that our paper, “INST-Align: Implicit Neural Alignment for Spatial Transcriptomics via Canonical Expression Fields,” has been accepted to MICCAI 2026!
 * **Feb 2026:** Paper submitted to MICCAI 2026.
 * **Sep 2025:** Started Ph.D. in Computer Science at NJIT.
@@ -27,7 +27,7 @@ If you are interested in my research, please feel free to [contact me](mailto:bh
 
 ---
 
-# 🔎 My Research Interests
+## 🔎 My Research Interests
 
 * **Computer Vision**
 * **Continual Learning**
