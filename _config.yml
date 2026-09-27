@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Bonian's room"
+title                    : "Bonian Han"
 title_separator          : "-"
 name                     : &name "Bonian Han"
 description              : &description "Bonian Han - CS Ph.D. student at NJIT"
