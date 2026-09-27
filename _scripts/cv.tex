@@ -1,64 +1,281 @@
-\documentclass[10pt,letterpaper]{article}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[letterpaper,left=56pt,right=56pt,top=35pt,bottom=38pt,footskip=22pt]{geometry}
-\usepackage{titlesec,enumitem,fontawesome5,xcolor,fancyhdr,lastpage}
-\definecolor{linkblue}{RGB}{0,79,144}
-\usepackage[colorlinks=true,urlcolor=linkblue,pdftitle={Bonian Han - Curriculum Vitae},pdfauthor={Bonian Han}]{hyperref}
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\fancyfoot[C]{\color{gray}\small\textit{Bonian Han - Page \thepage\ of \pageref*{LastPage}}}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-1pt}\titlerule]
-\titlespacing*{\section}{0pt}{7pt}{4pt}
-\setlist[itemize]{leftmargin=18pt,label=$\circ$,nosep,topsep=1pt}
-\setlist[enumerate]{leftmargin=25pt,itemsep=4pt,parsep=0pt,topsep=2pt}
-\newcommand{\entry}[2]{\noindent #1\hfill\textit{#2}\par}
-\newcommand{\doi}[1]{\mbox{\href{https://doi.org/#1}{DOI: #1\,\raisebox{.1ex}{\scriptsize\faExternalLink*}}}}
+\documentclass[10pt, letterpaper]{article}
+\usepackage[utf8]{inputenc} % allow Unicode characters
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Bonian Han's CV},
+    pdfauthor={Bonian Han},
+    pdfcreator={Bonian},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Bonian Han - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{}\hspace{\widthof{Last updated in January
+        2025}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
 \begin{document}
-\begin{center}
-{\fontsize{24}{28}\selectfont\bfseries Bonian Han}\\[11pt]
-{\small\faIcon[regular]{envelope}\enspace\href{mailto:bonianhan@u.boisestate.edu}{\color{black}bonianhan@u.boisestate.edu}}
-\end{center}
-\vspace{-8pt}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Bonian Han}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        % \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Your Location}%
+        % \kern 0.25 cm%
+        % \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:bonianhan@u.boisestate.edu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}bonianhan@u.boisestate.edu}}%
+        \kern 0.25 cm%
+        \AND%
+         \kern 0.25 cm%
+
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
 \section{Education}
-\entry{\textbf{Hangzhou Dianzi University} \textit{BS in Statistics}}{Sept 2021 - July 2025}
-\begin{itemize}\item GPA: 3.48 (84.8/95)\end{itemize}
-\entry{\textbf{New Jersey Institute of Technology} \textit{PhD studies in Computer Science}}{2025 - 2026}
-\begin{itemize}\item GPA: 4.0; Advisor: \href{https://scholar.google.com/citations?user=zAva84oAAAAJ\&hl=en}{Prof. Zhi Wei\,\scriptsize\faExternalLink*}\end{itemize}
-\entry{\textbf{Boise State University} \textit{PhD in Computing (expected start)}}{Fall 2026}
-\begin{itemize}\item Advisor: \href{https://yuzhang03.github.io/lab.html}{Prof. Yu Zhang\,\scriptsize\faExternalLink*}\end{itemize}
+
+\begin{twocolentry}{\textit{Sept 2021 - July 2025}}
+    \textbf{Hangzhou Dianzi University}
+    \textit{BS in Statistics}
+\end{twocolentry}
+
+\vspace{0.1cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item GPA: 3.48(84.8/95)
+
+    \end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{\textit{Sept 2025 - May 2026}}
+    \textbf{New Jersey Institute of Technology}
+    \textit{PhD in Computer Science}
+\end{twocolentry}
+
+\vspace{0.1cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item GPA: 4.0
+        \item Advisor:
+    \href{https://scholar.google.com/citations?user=zAva84oAAAAJ&hl=en}{Prof. Zhi Wei}
+    \end{highlights}
+\end{onecolentry}
+
+\begin{twocolentry}{\textit{Sept 2026 - present}}
+    \textbf{Boise State University}
+    \textit{PhD in Computer Science}
+\end{twocolentry}
+
+\vspace{0.1cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item GPA: 4.0
+        \item Advisor:
+    \href{https://yuzhang03.github.io/index.html}{Prof. Yu Zhang}
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2cm}
 
 \section{Skills \& Interests}
-\textbf{Research Interests:} Computer Vision, Continual Learning, Embodied AI, Trustworthy Machine Learning (Model Calibration and Uncertainty Quantification), Neural Representations for Spatial Transcriptomics\par
-\textbf{Skills:} Python, C/C++, PyTorch, SQL, R, Linux, Bash, Git, Docker\par
-\textbf{Languages:} TOEFL: 91, GRE: 326 (Verbal: 156, 69th percentile; Quantitative: 170, 92nd)
-
+\vspace{0.1cm}
+\begin{onecolentry}
+    \textbf{Research Interests:} Machine Learning, Computer Vision, AI Agent, Large Language Model
+\end{onecolentry}
+\vspace{0.1cm}
+\begin{onecolentry}
+    \textbf{Skills:} Python, C/C++, PyTorch, SQL, R, Linux, Bash, Git, Docker
+\end{onecolentry}
+\begin{onecolentry}
+    \textbf{Languages:} TOEFL: 91, GRE: 326 (Verbal: 156, 69th percentile; Quantitative: 170, 92nd)
+\end{onecolentry}
 \section{Publications}
+
 \begin{enumerate}
-\item J. Zhang, \textbf{B. Han}, G. Liang, and Y. Zhang. ``Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering.'' \textit{IEEE/RSJ IROS 2026 Workshop on Space Exploration and Sustained Operations Beyond Earth}, 2026. \textbf{Oral; Best Paper Runner-Up Award.}
-\item \textbf{B. Han}, C. Qi, P. Musialski, and Z. Wei. ``INST-Align: Implicit Neural Alignment for Spatial Transcriptomics via Canonical Expression Fields.'' \textit{Medical Image Computing and Computer Assisted Intervention (MICCAI)}, 2026. Accepted. \href{https://bonianhan.github.io/files/MICCAI26.pdf}{Paper\,\scriptsize\faExternalLink*}.
-\item \textbf{B. Han}, Y. P. Masupalli, X. Xing, and G. Liang. ``Improving Medical Imaging Model Calibration through Probabilistic Embedding.'' \textit{IEEE International Conference on Big Data}, 2024.\newline \doi{10.1109/BigData62323.2024.10825661}.
-\item \textbf{B. Han}, C. Moran, J. Yang, Y. Lee, Z. Cao, and G. Liang. ``Multi-Scale Self-Supervised Consistency Training for Trustworthy Medical Imaging Classification.'' \textit{46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)}, 2024. Podium (acceptance rate approx. 28\%). H5-Index: 48. \doi{10.1109/EMBC53108.2024.10782322}.
-\item J. Zulu, \textbf{B. Han}, I. Alsmadi, and G. Liang. ``Contextualized Embedding-Based Approach for Enhanced SQL Injection Detection.'' \textit{62nd ACM SouthEast Annual Conference}, 2024. \doi{10.1145/3603287.3651187}.
+    \sloppy
+    \item J. Zhang, \textbf{B. Han}, G. Liang, and Y. Zhang. (2026). Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering. \textit{IEEE/RSJ IROS 2026 Workshop on Space Exploration and Sustained Operations Beyond Earth}. \textbf{Oral; Best Paper Runner-Up Award.}
+    \item \textbf{Han, B.}, Qi, C., Musialski, P., and Wei, Z. (2026). INST-Align: Implicit Neural Alignment for Spatial Transcriptomics via Canonical Expression Fields. \textit{Medical Image Computing and Computer Assisted Intervention (MICCAI)}. Accepted. \href{https://bonianhan.github.io/files/MICCAI26.pdf}{Paper}.
+    \item \textbf{Han, B.}, Masupalli, Y. P., Xing, X., and Liang, G. (2024, December). Improving Medical Imaging Model Calibration through Probabilistic Embedding. \textit{2024 IEEE International Conference on Big Data (IEEE BigData 2024)}. \href{https://ieeexplore.ieee.org/abstract/document/10825661/}{DOI:10.1109/BigData62323.2024.10825661}.
+    \item \textbf{Han, B.}, Moran, C., Yang, J., Lee, Y., Cao, Z., and Liang, G. (2024, July). Multi-Scale Self-Supervised Consistency Training for Trustworthy Medical Imaging Classification. In \textit{Proceedings of the 46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)}. Podium (acceptance rate approx. 28\%). H5-Index: 48. \href{https://ieeexplore.ieee.org/abstract/document/10782322}{DOI: 10.1109/EMBC53108.2024.10782322}.
+    \item Zulu, J., \textbf{Han, B.}, Alsmadi, I., and Liang, G. (2024, March). Contextualized Embedding-Based Approach for Enhanced SQL Injection Detection. In \textit{Proceedings of the 62nd ACM SouthEast Annual Conference}. \href{https://dl.acm.org/doi/10.1145/3603287.3651187}{DOI:10.1145/3603287.3651187}.
 \end{enumerate}
 
+\newpage
 \section{Experience}
-\entry{\textbf{Research} \textit{with Dr. Gongbo Liang, Texas A\&M University-San Antonio}}{Nov 2023 - Nov 2024}
-\begin{itemize}\item Conducted computer vision research on medical image analysis, model calibration, and feature extraction to reduce model bias. Three papers accepted: \textit{IEEE EMBC}, \textit{ACMSE}, and \textit{IEEE Big Data}.\end{itemize}
-\entry{\textbf{Research} \textit{with Prof. Zhi Wei, New Jersey Institute of Technology}}{Sept 2025 - 2026}
-\begin{itemize}\item Studied spatial transcriptomics and neural representations. Worked on INST-Align, coupling spatial alignment with a canonical expression field; accepted to MICCAI 2026.\end{itemize}
-\entry{\textbf{Working} \textit{Ballkids Coach \& Manager}}{Sept 2024}
-\begin{itemize}\item Trained and managed ballkids (ages 9-14) at the Hangzhou Open ATP 250 and ATP Challenger; coordinated on-court schedules across departments and ensured smooth operations, court etiquette, and safety.\end{itemize}
-\entry{\textbf{Volunteer} \textit{19th Asian Games and Asian Para Games}}{Sept 2023 - Oct 2023}
-\begin{itemize}\item Served as a Tennis Ballkids \& Ceremony Assistant, managing on-court operations and assisting players and umpires; featured by CCTV and honored as an Outstanding and Excellent Volunteer.\end{itemize}
+
+\textbf{Research} \textit{with Dr. Gongbo Liang, Texas A\&M University-San Antonio} \hfill \textit{Nov 2023 - Nov 2024}
+\begin{itemize}[leftmargin=2.0em, itemsep=1pt, topsep=1pt]
+    \item Conducted research on computer vision, focusing on model calibration and feature extraction to reduce model bias. Three papers accepted: \textit{IEEE EMBC}, \textit{ACMSE}, and \textit{IEEE Big Data}.
+\end{itemize}
+
+\textbf{Research} \textit{with Prof. Zhi Wei, New Jersey Institute of Technology} \hfill \textit{Sept 2025 - May 2026}
+\begin{itemize}[leftmargin=2.0em, itemsep=1pt, topsep=1pt]
+    \item Conducted research on spatial transcriptomics and neural representation methods. Worked on INST-Align, coupling spatial alignment with a canonical expression field; accepted to MICCAI 2026.
+\end{itemize}
+
+\textbf{Working} \textit{Ballkids Coach \& Manager} \hfill \textit{Sept 2024}
+\begin{itemize}[leftmargin=2.0em, itemsep=0pt, topsep=2pt]
+    \item Trained and managed professional ballkids (ages 9-14) at the Hangzhou Open ATP 250 and ATP Challenger, ensuring smooth match operations, coordination of on-court schedules across departments, and adherence to court etiquette and safety protocols.
+\end{itemize}
+
+\textbf{Volunteer} \textit{19th Asian Games and Asian Para Games} \hfill \textit{Sept 2023 - Oct 2023}
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=2pt]
+    \item Served as a Tennis Ballkids \& Ceremony Assistant, managing on-court operations and assisting players and umpires; featured by China Central Television (CCTV) and honored as an Outstanding and Excellent Volunteer.
+\end{itemize}
+
+
+
+
+
 
 \section{Awards \& Honors}
-\textbf{Best Paper Runner-Up Award}, IEEE/RSJ IROS 2026 Workshop\hfill 2026\par
-\textbf{Outstanding \& Excellent Volunteer}, National\hfill 2023\par
-\textbf{Second Prize}, Statistics Research Competition, Provincial (State)\hfill 2023\par
-\textbf{Third Prize}, National College Students Mathematics Competition (Online Challenge)\hfill 2022\par
-\textbf{Fifth Place}, University Basketball Annual Competition\hfill May 2022
+\textbf{Best Paper Runner-Up Award,} IEEE/RSJ IROS 2026 Workshop \hfill Sept 2026 \\
+\textbf{Outstanding \& Excellent Volunteer,} National \hfill 2023 \\
+\textbf{Second Prize,} Statistics Research Competition, Provincial (State)\hfill 2023 \\
+\textbf{Third Prize,} National College Students Mathematics Competition (Online Challenge) \hfill 2022 \\
+\textbf{Fifth Place,} University Basketball Annual Competition \hfill May 2022 \\
 \end{document}
