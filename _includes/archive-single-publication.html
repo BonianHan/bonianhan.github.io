@@ -17,6 +17,10 @@
     {% endif %}
   </p>
 
+  {% if post.award %}
+    <p class="publication-item__meta"><strong>{{ post.award }}</strong></p>
+  {% endif %}
+
   <nav class="publication-item__actions" aria-label="Links for {{ post.title | escape }}">
     {% if post.paperurl %}
       <a class="publication-item__action" href="{{ post.paperurl }}">

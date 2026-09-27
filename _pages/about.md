@@ -11,13 +11,18 @@ redirect_from:
 
 📖 Starting in Fall 2026, I will pursue my Ph.D. in Computing at [Boise State University](https://www.boisestate.edu/) under the supervision of Prof. [Yu Zhang](https://yuzhang03.github.io/lab.html#). Previously, I was a Ph.D. student in Computer Science at the [NJIT](https://www.njit.edu/) (2025-2026). I received my B.S. in Statistics from [Hangzhou Dianzi University](https://en.hdu.edu.cn/) in 2025.
 
-👨‍💻 My research focuses on **computer vision**, **continual learning**, and **embodied AI**. I am also broadly interested in trustworthy machine learning, including model calibration and uncertainty quantification. Beyond these areas, I remain particularly interested in neural representation methods for spatial transcriptomics. Previously, I worked with Prof. [Gongbo Liang](http://www.gb-liang.com/) at [Texas A&M University-San Antonio](https://www.tamusa.edu/) on medical image analysis and neural network calibration, resulting in publications at EMBC, IEEE Big Data, and ACMSE. At NJIT, I worked with Prof. [Zhi Wei](https://scholar.google.com/citations?user=zAva84oAAAAJ&hl=en) on spatial transcriptomics; our work was accepted to MICCAI 2026.
+👨‍💻 My research focuses on **computer vision**, **continual learning**, and **embodied AI**. I am also broadly interested in trustworthy machine learning, including model calibration and uncertainty quantification. Beyond these areas, I remain particularly interested in neural representation methods for spatial transcriptomics.
+
+Previously, I worked with Prof. [Gongbo Liang](http://www.gb-liang.com/) at [Texas A&M University-San Antonio](https://www.tamusa.edu/) on medical image analysis and neural network calibration, resulting in publications at EMBC, IEEE Big Data, and ACMSE.
+
+At NJIT, I worked with Prof. [Zhi Wei](https://scholar.google.com/citations?user=zAva84oAAAAJ&hl=en) on spatial transcriptomics; our work was accepted to MICCAI 2026.
 
 If you are interested in my research, please feel free to [contact me](mailto:bonianhan@u.boisestate.edu). [CV](https://bonianhan.github.io/files/CV.pdf)
 
 ---
 
 ## 📰 News
+* **2026:** Our paper, “[Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering](/publication/26-iros-workshop),” was presented as an **oral** at the IEEE/RSJ IROS 2026 Workshop on Space Exploration and Sustained Operations Beyond Earth and received the **Best Paper Runner-Up Award**!
 * **Jun 2026:** Thrilled to share that our paper, “INST-Align: Implicit Neural Alignment for Spatial Transcriptomics via Canonical Expression Fields,” has been accepted to MICCAI 2026!
 * **Feb 2026:** Paper submitted to MICCAI 2026.
 * **Sep 2025:** Started Ph.D. in Computer Science at NJIT.
